@@ -4,7 +4,8 @@ console.log('App.js is running!');
 
 var app = {
     title: 'Random',
-    subTitle: 'Subtitle Goes Here'
+    subTitle: 'Subtitle Goes Here',
+    options: ['One', 'Two']
 
     // JSX == Javascript XML
 };var template = React.createElement(
@@ -15,10 +16,15 @@ var app = {
         null,
         app.title
     ),
-    React.createElement(
+    app.subTitle && React.createElement(
         'p',
         null,
         app.subTitle
+    ),
+    React.createElement(
+        'p',
+        null,
+        app.options.length > 0 ? 'Here are your options' : 'No options'
     )
 );
 
@@ -58,4 +64,4 @@ var templateTwo = React.createElement(
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
