@@ -5,7 +5,7 @@ console.log('App.js is running!');
 var app = {
     title: 'Random',
     subTitle: 'Subtitle Goes Here',
-    options: ['One', 'Two']
+    options: []
 };
 
 var onFormSubmit = function onFormSubmit(e) {
@@ -59,16 +59,13 @@ var renderChangeApp = function renderChangeApp() {
         React.createElement(
             'ol',
             null,
-            React.createElement(
-                'li',
-                null,
-                'Item One'
-            ),
-            React.createElement(
-                'li',
-                null,
-                'Item Two'
-            )
+            app.options.map(function (opt, idx) {
+                return React.createElement(
+                    'li',
+                    { key: idx },
+                    opt
+                );
+            })
         ),
         React.createElement(
             'form',

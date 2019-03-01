@@ -3,7 +3,7 @@ console.log('App.js is running!');
 const app = {
     title: 'Random',
     subTitle: 'Subtitle Goes Here',
-    options: ['One', 'Two']
+    options: []
 }
 
 const onFormSubmit = (e) => {
@@ -34,8 +34,11 @@ const renderChangeApp = () => {
             <p>{app.options.length}</p>
             <button onClick={removeAll}>Remove Options</button>
             <ol>
-                <li>Item One</li>
-                <li>Item Two</li>
+                {
+                    app.options.map((opt, idx) => {
+                        return <li key={idx}>{opt}</li>
+                    })
+                }
             </ol>
             <form onSubmit={onFormSubmit}>
                 <input type="text" name="option"/>
