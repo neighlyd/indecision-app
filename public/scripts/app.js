@@ -21,7 +21,7 @@ var IndecisionApp = function (_React$Component) {
         _this.handlePick = _this.handlePick.bind(_this);
         _this.handleAddOption = _this.handleAddOption.bind(_this);
         _this.state = {
-            options: props.options,
+            options: [],
             subtitle: props.subtitle
         };
         return _this;
@@ -111,7 +111,6 @@ var IndecisionApp = function (_React$Component) {
 }(React.Component);
 
 IndecisionApp.defaultProps = {
-    options: [],
     subtitle: 'Put your life in the hands of a computer!'
 };
 
