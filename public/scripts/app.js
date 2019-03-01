@@ -28,28 +28,34 @@ var user = {
     loc: 'Seattle'
 };
 
+var getLocation = function getLocation(loc) {
+    if (loc) {
+        return React.createElement(
+            'p',
+            null,
+            'Location: ',
+            loc
+        );
+    }
+};
+
 var templateTwo = React.createElement(
     'div',
     null,
     React.createElement(
         'h1',
         null,
-        user.name
+        user.name ? user.name : 'Anonymous'
     ),
-    React.createElement(
+    user.age && user.age >= 18 && React.createElement(
         'p',
         null,
         'Age: ',
         user.age
     ),
-    React.createElement(
-        'p',
-        null,
-        'Location: ',
-        user.loc
-    )
+    getLocation(user.loc)
 );
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);

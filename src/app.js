@@ -19,14 +19,20 @@ let user = {
     loc: 'Seattle'
 }
 
+const getLocation = (loc) => {
+    if (loc) {
+        return <p>Location: {loc}</p>
+    } 
+}
+
 let templateTwo = (
     <div>
-        <h1>{user.name}</h1>
-        <p>Age: {user.age}</p>
-        <p>Location: {user.loc}</p>
+        <h1>{user.name ? user.name : 'Anonymous'}</h1>
+        {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
+        {getLocation(user.loc)}
     </div>
 );
 
 let appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
