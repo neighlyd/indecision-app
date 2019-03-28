@@ -1,6 +1,6 @@
 .header {
-    background: $off-black;
-    color: white;
+    background: $off-white;
+    color: $grey;
     margin-bottom: $m-size;
     padding: $m-size 0;
 
@@ -12,7 +12,7 @@
 }
 
 .header__subtitle {
-    color: $off-white;
+    color: $grey;
     font-size: $m-size;
     font-weight: 400;
     margin: 0;

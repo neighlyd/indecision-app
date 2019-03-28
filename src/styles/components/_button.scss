@@ -1,8 +1,8 @@
 .big-button {
-    background: $purple;
+    background: $dark-green;
     border: none;
-    border-bottom: .6rem solid darken($purple, 10);
-    border-right: .4rem solid darken($purple, 10);
+    border-bottom: .6rem solid darken($dark-green, 10);
+    border-right: .4rem solid darken($dark-green, 10);
     color: white;
     font-weight: bold;
     font-size: $l-size;
@@ -16,10 +16,10 @@
 }
 
 .button {
-    background: $purple;
+    background: $dark-green;
     border: none;
-    border-bottom: .3rem solid darken($purple, 10);
-    border-right: .2rem solid darken($purple, 10);
+    border-bottom: .3rem solid darken($dark-green, 10);
+    border-right: .2rem solid darken($dark-green, 10);
     color: white;
     font-weight: 500;
     padding: $s-size;
